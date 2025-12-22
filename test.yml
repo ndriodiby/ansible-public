@@ -1,0 +1,13 @@
+ - name: Protocol Configuration
+   hosts: CSR1
+   connection: local
+   gather_facts: no
+
+  
+
+   tasks:
+
+    
+     - name: show configuration
+       ios_config:
+         src: "~/Network-Automation/Scripts/Ansible/CSR.txt"

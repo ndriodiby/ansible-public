@@ -1,0 +1,17 @@
+
+- name: Upgrade Cisco IOS
+  hosts: 3750G-Access-Switch
+  gather_facts: no
+  become: yes
+
+
+  tasks:
+
+
+    - name: Copy Image // This could take up to 4 minutes
+      ansible.netcommon.net_put:
+        src: "~/Network-Automation/Scripts/Ansible/PA.txt"
+        dest: "flash:/PA.txt"
+        protocol: scp
+
+    

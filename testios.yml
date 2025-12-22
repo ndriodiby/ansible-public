@@ -1,0 +1,21 @@
+- name: switch configuration deployment
+  hosts: Edgerouter
+  gather_facts: no
+  become: yes
+
+
+  tasks:
+
+
+
+    - name: show ip interface brief and ip route
+      ios_config:
+        lines:
+          - ip dhcp-excluded-address 192.168.45.1
+          
+         
+        
+
+
+      
+          
