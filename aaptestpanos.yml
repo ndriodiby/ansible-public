@@ -1,0 +1,19 @@
+- name: CREATE ADDRESS OBJECT
+  hosts: 192.168.25.15
+  gather_facts: false
+
+  collections:
+    - paloaltonetworks.panos
+
+
+  tasks:
+
+
+    - name: create IP object
+      panos_address_object:
+       
+        name: '2.2.2.2-aap'
+        value: '2.2.2.2'
+        description: '2.2.2.2 was deployed from aap'
+        tag: 'ansibletest'
+        
