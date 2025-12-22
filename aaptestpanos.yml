@@ -2,8 +2,8 @@
   hosts: 192.168.25.15
   gather_facts: false
 
-  collections:
-    - paloaltonetworks.panos
+  roles:
+    - role: PaloAltoNetworks.paloaltonetworks
 
 
   tasks:
