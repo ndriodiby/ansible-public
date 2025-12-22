@@ -10,9 +10,9 @@
 
 
     - name: create ip object
-      panos_address_object:
-        name: 'ansible'
-        value: '2.2.2.2'
-        description: 'aap deployment'
-        tag: ['ansibletest']
+      panos_zone:
+        zone: 'ansible'
+        mode: 'layer3'
+        zone_profile: 'strict'
+
         
