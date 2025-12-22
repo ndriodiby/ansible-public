@@ -1,0 +1,7 @@
+- name: Uploading IOS Image to Target Switch // This will take few minutes
+      net_put:
+        src: "~/Network-Automation/Scripts/Ansible/IOS-Images/c3750-ipservicesk9-mz.122-55.SE12.bin"
+        dest:  "flash:/c3750-ipservicesk9-mz.122-55.SE12.bin"
+
+      vars: 
+        ansible_command_timeout: 600

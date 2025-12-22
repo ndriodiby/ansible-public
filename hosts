@@ -1,0 +1,86 @@
+
+[switches:vars]
+ansible_user=admin
+ansible_password=c1sc0123
+ansible_network_os=ios
+ansible_connection=network_cli
+ansible_become= yes
+ansible_become_method=enable
+ansible_become_password=c1sc0123
+
+[csr1000v:vars]
+ansible_user=admin
+ansible_password=admin
+ansible_network_os=ios
+ansible_connection=network_cli
+
+
+[router2901:vars]
+ansible_user=admin
+ansible_password=c1sc0123
+ansible_network_os=ios
+ansible_connection=network_cli
+ansible_become=yes
+ansible_become_method=enable
+ansible_become_password=c1sc0123
+
+[nxos:vars]
+ansible_user=admin
+ansible_password=admin
+ansible_network_os=nxos
+ansible_network_os=ios
+ansible_connection=network_cli
+
+
+[ACI:vars]
+ansible_user=admin
+ansible_password=c1sc0123
+ansible_network_os=nxos
+ansible_connection=network_cli
+
+[paloalto:vars]
+ansible_user=admin
+ansible_password=C1sc0123@
+ansible_network_os=panos
+ansible_connection=local
+
+
+[switches]
+3750-Switch-Access ansible_host=192.168.25.60
+3750G-Access-Switch ansible_host=192.168.50.254
+SwitchStack ansible_host=10.10.10.10
+DSW-ASA ansible_host=192.168.13.27
+DWS-PA-Branch ansible_host=192.168.12.29
+AWS-PA-Branch ansible-host=192.168.13.28
+
+
+[csr1000v]
+CSR1 ansible_host=192.168.25.95
+CSR2 ansible_host=192.168.25.96
+
+
+[router2901]
+Edgerouter ansible_host=100.1.1.1
+
+[nxos]
+Nexus9300 ansible_host=192.168.25.99
+Nexus9300_2 ansible_host=192.168.25.97
+Nexus9500 ansible_host=192.168.25.98
+nxosv-7.0.3.I7.10 ansible_host=192.168.25.93
+nxosv-7.0.3.I5.1 ansible_host=192.168.25.90
+nxos9300-10.3.2 ansible_host=192.168.25.92
+
+[ACI]
+apic1 ansible_host=193.168.25.250
+
+[paloalto]
+PA-VM-40 ansible_host=192.168.25.40
+PA-VM-41 ansible_host=192.168.25.41
+PA-VM-2 ansible_host=192.168.10.2
+PA-VM-3 ansible_host=192.168.10.3
+PA-VM-4 ansible_host=192.168.10.4
+
+
+
+
+
