@@ -9,9 +9,8 @@
   tasks:
 
 
-    - name: create IP object
+    - name: create ip object
       panos_address_object:
-       
         name: '2.2.2.2-aap'
         value: '2.2.2.2'
         description: '2.2.2.2 was deployed from aap'
