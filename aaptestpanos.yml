@@ -11,8 +11,8 @@
 
     - name: create ip object
       panos_address_object:
-        name: '2.2.2.2-aap'
+        name: 'ansible'
         value: '2.2.2.2'
-        description: '2.2.2.2 was deployed from aap'
-        tag: 'ansibletest'
+        description: ' aap deployment'
+        tag: ['ansibletest']
         
