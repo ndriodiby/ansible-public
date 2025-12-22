@@ -7,12 +7,10 @@
 
 
   tasks:
-
-
-    - name: create ip object
-      panos_zone:
-        zone: 'ansible'
-        mode: 'layer3'
-        zone_profile: 'strict'
+  - name: create ip object
+    panos_zone:
+      zone: 'ansible'
+      mode: 'layer3'
+      zone_profile: 'strict'
 
         
