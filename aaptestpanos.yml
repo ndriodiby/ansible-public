@@ -13,6 +13,6 @@
       panos_address_object:
         name: 'ansible'
         value: '2.2.2.2'
-        description: ' aap deployment'
+        description: 'aap deployment'
         tag: ['ansibletest']
         
