@@ -1,6 +1,7 @@
 - name: CREATE ADDRESS OBJECT
   hosts: 192.168.25.15
   gather_facts: false
+  connection: local
 
   
      
@@ -9,11 +10,11 @@
   tasks:
 
   
-    - name: create ip object
-      panos_address_object:
-        name: 'ansible'
-        value: '1.2.3.4'
-        description: 'from aap'
-        tag: ['ansibletest']
+  - name: create ip object
+    paloaltonetworks.panos.panos_address_object:
+      name: 'ansible'
+      value: '1.2.3.4'
+      description: 'from aap'
+      tag: ['ansibletest']
 
         
