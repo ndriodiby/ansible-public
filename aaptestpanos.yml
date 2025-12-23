@@ -10,11 +10,12 @@
   tasks:
 
   
-  - name: create ip object
-    paloaltonetworks.panos.panos_address_object:
-      name: 'ansible'
-      value: '1.2.3.4'
-      description: 'from aap'
-      tag: ['ansibletest']
+    - name: create ip object
+      paloaltonetworks.panos.panos_address_object:
+        state: absent    
+        name: "ansible"
+        address_type: "ip-netmask"
+        description: "from aap"
+        value: "1.2.3.4"
 
         
