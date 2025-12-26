@@ -1,0 +1,7 @@
+- name: Router connectivity ping test
+  hosts: routers
+  gather_facts: no
+
+  tasks:
+    - name: Ping routers from AAP control node
+      ansible.builtin.ping:
