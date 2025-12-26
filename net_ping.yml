@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: firewalls
   gather_facts: false
   tasks:
     - ansible.netcommon.net_ping:
