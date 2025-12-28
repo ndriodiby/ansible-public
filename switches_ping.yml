@@ -1,5 +1,5 @@
 - name: Switches connectivity ping test
-  hosts: cisco_nxos
+  hosts: switches
   gather_facts: no
 
   tasks:
