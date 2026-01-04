@@ -1,0 +1,22 @@
+
+- name: Configuration Deployment
+  hosts: PA-VM
+  gather_facts: no
+
+  collections:
+    - paloaltonetworks.panos
+
+
+  tasks:
+
+    
+    
+
+    - name: create IKE gateway
+      panos_address_object:
+        api_key: 'LUFRPT1Kb3VyOFhXUTV1V3R4QWl4WXB2anJQOGFvS1k9ZW5JMkJ4RXVZaWE5VjcrWXhGaWZvY0FmSGlhWldaTFZvc0pmT21mS2dDUCtEcm0rRFlJdmVlS2RSbTM5SzlmOQ=='
+        ip_address: '192.168.25.15'
+        name: 'ansible'
+        value: '1.2.3.5'
+        description: 'from ansible'
+    
