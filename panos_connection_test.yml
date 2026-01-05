@@ -5,11 +5,12 @@
 
 
 
-tasks:
+  tasks:
 
-- name: show effective connection
-  debug:
-    msg:
-      - "connection={{ ansible_connection }}"
-      - "network_os={{ ansible_network_os }}"
+    - name: show effective connection
+      debug:
+        msg:
+          - "connection={{ ansible_connection }}"
+          - "network_os={{ ansible_network_os }}"
+
 
