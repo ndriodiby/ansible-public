@@ -1,1 +1,15 @@
+- name: PAN-OS config
+  hosts: paloalto
+  connection: httpapi
+  gather_facts: false
+
+
+
+tasks:
+
+- name: show effective connection
+  debug:
+    msg:
+      - "connection={{ ansible_connection }}"
+      - "network_os={{ ansible_network_os }}"
 
