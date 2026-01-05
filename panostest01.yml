@@ -1,20 +1,15 @@
 
 - name: Configuration Deployment
-  hosts: pa_fw01
-  gather_facts: no
-
-
+  hosts: paloalto
+  connection: httpapi
+  gather_facts: false
 
   tasks:
-
-    
-    
-
     - name: create IP object
       paloaltonetworks.panos.panos_address_object:
-        api_key: 'LUFRPT1Kb3VyOFhXUTV1V3R4QWl4WXB2anJQOGFvS1k9ZW5JMkJ4RXVZaWE5VjcrWXhGaWZvY0FmSGlhWldaTFZvc0pmT21mS2dDUCtEcm0rRFlJdmVlS2RSbTM5SzlmOQ=='
-        ip_address: '192.168.25.15'
-        name: 'aaptest'
-        value: '1.7.3.5'
-        description: 'push from ansible'
+        name: aaptest
+        value: 1.7.3.5
+        description: push from aap
+        state: present
+
     
