@@ -2,16 +2,23 @@
 - name: Configuration Deployment
   hosts: pa_fw01
   gather_facts: no
-  connection: httpapi
+  connection: local
 
-  collections:
-    - paloaltonetworks.panos
+
+  vars:
+    # 'provider' values are typically passed from AAP credentials
+    # but defined here for structural clarity.
+    panos_provider:
+      ip_address: "{{ ansible_host }}"
+      username: "{{ ansible_user }}"
+      password: "{{ ansible_password }}"
+
+ 
 
   tasks:
     - name: create IP object
       paloaltonetworks.panos.panos_address_object:
-        api_key: 'LUFRPT1Kb3VyOFhXUTV1V3R4QWl4WXB2anJQOGFvS1k9ZW5JMkJ4RXVZaWE5VjcrWXhGaWZvY0FmSGlhWldaTFZvc0pmT21mS2dDUCtEcm0rRFlJdmVlS2RSbTM5SzlmOQ=='
-        ip_address: '192.168.25.15'
+        provider: "{{ panos_provider }}"
         name: 'aaptest'
         value: '1.7.3.5'
         description: 'push from aap'
