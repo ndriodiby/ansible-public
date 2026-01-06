@@ -1,0 +1,10 @@
+- name: PROVE CONNECTION
+  hosts: paloalto
+  gather_facts: false
+
+  tasks:
+    - name: show connection in use
+      debug:
+        msg:
+          - "connection={{ ansible_connection }}"
+          - "network_os={{ ansible_network_os | default('NONE') }}"
