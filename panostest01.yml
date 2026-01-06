@@ -1,19 +1,16 @@
 
 - name: Configuration Deployment
-  hosts: paloalto
+  hosts: pa_fw01
   gather_facts: no
   connection: httpapi
 
   tasks:
     - name: create IP object
       paloaltonetworks.panos.panos_address_object:
-        
-        ip_address: "{{ ansible_host }}"
-        ansible_username: "{{ ansible_user }}"
-        ansible_password: "{{ ansible_password }}"
-        name: aaptest
-        value: 1.7.3.5
-        description: push from aap
+        ip_address: '192.168.25.15'
+        name: 'aaptest'
+        value: '1.7.3.5'
+        description: 'push from aap'
 
 
 
