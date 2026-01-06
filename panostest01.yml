@@ -1,16 +1,18 @@
 
 - name: Configuration Deployment
   hosts: paloalto
+  gather_facts: no
   connection: httpapi
-  gather_facts: false
 
   tasks:
     - name: create IP object
       paloaltonetworks.panos.panos_address_object:
+        provider:
+          ip_address: "{{ ansible_host }}"
         name: aaptest
         value: 1.7.3.5
         description: push from aap
-        state: present
+
 
 
     
