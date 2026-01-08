@@ -13,8 +13,9 @@
 # extra vars.
 
 
-- hosts: 
+- hosts: pa_fw01
   connection: local
+  gather_facts: false
 
   vars:
     device:
