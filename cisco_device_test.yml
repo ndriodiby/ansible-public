@@ -1,5 +1,5 @@
  - name: Protocol Configuration
-   hosts: csr1
+   hosts: nexus9300_01
    connection: network_cli
    gather_facts: no
 
@@ -9,5 +9,5 @@
 
     
      - name: show configuration
-       ios_config:
-         src: "CSR1.txt"
+       nxos_config:
+         src: "nxos.txt"
