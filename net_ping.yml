@@ -1,4 +1,0 @@
-- hosts: routers
-  gather_facts: false
-  tasks:
-    - ansible.netcommon.net_ping:
