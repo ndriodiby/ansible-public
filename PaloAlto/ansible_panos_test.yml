@@ -1,0 +1,17 @@
+
+- name: OBJECT CREATION
+  hosts: pa_fw01 
+  gather_facts: false
+
+
+  tasks:
+
+
+    - name: Create IP object
+      paloaltonetworks.panos.panos_address_object:
+        ip_address: 192.168.25.15
+        name: 'test123'
+        value: '1.5.6.9'
+        description: 'pushed from aap'
+        tag: ['Prod']
+        

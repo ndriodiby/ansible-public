@@ -1,0 +1,11 @@
+- name: PAN-OS config
+  hosts: paloalto
+  connection: httpapi
+  gather_facts: false
+
+
+  tasks:
+
+    - debug:
+        var: ansible_user
+

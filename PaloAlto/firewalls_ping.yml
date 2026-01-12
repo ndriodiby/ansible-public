@@ -1,0 +1,7 @@
+- name: Firewall connectivity ping test
+  hosts: firewalls
+  gather_facts: no
+
+  tasks:
+    - name: Ping firewall from AAP control node
+      ansible.builtin.ping:

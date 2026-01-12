@@ -1,0 +1,19 @@
+- name: GET FIREWALL CONFIGS
+  hosts: PA-VM-3 
+  gather_facts: false
+
+  collections:
+    - paloaltonetworks.panos
+
+
+  tasks:
+
+
+    - name: gathering interfaces info
+      panos_zone:
+        api_key: 'LUFRPT1ONklQVmZBYTNLa3kreE9iRUNvQzNzRGxUenM9ZW5JMkJ4RXVZaWE5VjcrWXhGaWZvZjVjOTh4Z2NVQTN1ZEdPOFFUaXI4bHN6N09Jb3pia0RmTFpwd2YwdlE0dw=='
+        ip_address: '192.168.10.3'
+        zone: 'Ansible'
+        mode: 'layer3'
+        state: 'present'
+        
